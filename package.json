@@ -1,0 +1,22 @@
+{
+  "name": "wish-list",
+  "version": "1.0.0",
+  "description": "awesome app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "client":"npm run start --prefix client",
+    "server":"nodemon app.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "mukesh phulwani",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.1"
+  }
+}
